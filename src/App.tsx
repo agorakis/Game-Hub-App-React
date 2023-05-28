@@ -41,7 +41,7 @@ function App() {
             />
           </GridItem>
         </Show>
-        <GridItem area={"main"}>
+        <GridItem area={"main"} marginY={5}>
           <PlatformSelector
             onSelectPlatform={onSelectPlatform}
             selectedPlatform={selectedPlatform}

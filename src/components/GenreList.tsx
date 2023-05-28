@@ -17,7 +17,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: GenreListProps) => {
         </Text>
       )}
       {isLoading && <Spinner marginY={4} />}
-      <List>
+      <List marginY={12}>
         {data.map((genre) => (
           <ListItem key={genre.id} paddingY={3}>
             <HStack>
