@@ -8,8 +8,8 @@ interface PlatformSelectorProps {
 }
 
 const PlatformSelector = ({
-  selectedPlatform,
   onSelectPlatform,
+  selectedPlatform,
 }: PlatformSelectorProps) => {
   const { data, errors } = usePlatforms();
 
