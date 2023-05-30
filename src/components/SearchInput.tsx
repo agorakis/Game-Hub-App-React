@@ -4,15 +4,8 @@ import { BsSearch } from "react-icons/bs";
 const SearchInput = () => {
   return (
     <InputGroup>
-      <InputLeftElement pointerEvents="none">
-        <Icon as={BsSearch} />
-      </InputLeftElement>
-      <Input
-        type="search"
-        borderRadius={20}
-        placeholder="Search games..."
-        variant="filled"
-      />
+      <InputLeftElement children={<BsSearch />} />
+      <Input borderRadius={20} placeholder="Search games..." variant="filled" />
     </InputGroup>
   );
 };
