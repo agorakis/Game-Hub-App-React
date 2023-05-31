@@ -16,7 +16,7 @@ const GameGrid = ({ gameQuery }: GameGridProps) => {
   return (
     <>
       {errors && (
-        <Text paddingTop={5} textAlign="center" fontSize="lg">
+        <Text padding={5} textAlign="center" fontSize="lg">
           {errors}
         </Text>
       )}

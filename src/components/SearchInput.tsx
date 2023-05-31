@@ -15,7 +15,7 @@ const SearchInput = ({ onSearch }: SearchInputProps) => {
   };
 
   return (
-    <form style={{ width: "100%" }} onSubmit={onSubmit}>
+    <form onSubmit={onSubmit}>
       <InputGroup>
         <InputLeftElement children={<BsSearch />} />
         <Input
