@@ -24,6 +24,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: GenreListProps) => {
               <Image
                 boxSize="32px"
                 borderRadius={10}
+                objectFit="cover"
                 src={getCroppedImageUrl(genre.image_background)}
               />
               <Text
