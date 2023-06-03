@@ -4,4 +4,4 @@ Scope of this project was to get familiar with React Functional Components and H
 
 This project was part of a Mosh Hamedani's React + Typescript course "React 18 for Beginners".
 
-This project is live here:
+This project is live here: https://game-hub-app-eta.vercel.app/
