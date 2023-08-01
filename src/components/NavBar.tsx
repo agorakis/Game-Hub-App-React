@@ -1,12 +1,9 @@
-import { Flex, HStack, Image, Show } from "@chakra-ui/react";
+import { Flex, Image, Show } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-interface NavBarProps {
-  onSearch: (searchText: string) => void;
-}
-const NavBar = ({ onSearch }: NavBarProps) => {
+const NavBar = () => {
   return (
     <Flex
       justifyContent="space-between"
@@ -16,7 +13,7 @@ const NavBar = ({ onSearch }: NavBarProps) => {
     >
       <Image src={logo} boxSize="60px"></Image>
       <Show above="md">
-        <SearchInput onSearch={onSearch} />
+        <SearchInput />
       </Show>
       <ColorModeSwitch />
     </Flex>
