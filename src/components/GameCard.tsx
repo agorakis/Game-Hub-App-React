@@ -4,6 +4,7 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import Emoji from "./Emoji";
+import { Link } from "react-router-dom";
 
 interface GameCardProps {
   game: Game;
@@ -15,7 +16,9 @@ const GameCard = ({ game }: GameCardProps) => {
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
-          <Heading fontSize="2xl">{game.name}</Heading>
+          <Heading fontSize="2xl">
+            {<Link to={`game/${game.slug}`}>{game.name}</Link>}
+          </Heading>
           <Emoji rating={game.rating_top} />
         </HStack>
 

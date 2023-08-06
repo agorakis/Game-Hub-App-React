@@ -7,7 +7,7 @@ import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
 
 const GameGrid = () => {
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
 
   const fetchedGamesCount =
