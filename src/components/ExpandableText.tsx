@@ -3,7 +3,7 @@ import { useState } from "react";
 
 interface ExpandableTextProps {
   limit: number;
-  children: string;
+  children: string | undefined;
 }
 
 const ExpandableText = ({ limit, children }: ExpandableTextProps) => {

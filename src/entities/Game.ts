@@ -4,7 +4,7 @@ export interface Game {
   id: number;
   name: string;
   slug: string;
-  description_raw: string;
+  description_raw: string | undefined;
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
