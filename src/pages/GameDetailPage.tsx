@@ -1,6 +1,7 @@
 import { Heading, Spinner, Text, VStack } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
+import ExpandableText from "../components/ExpandableText";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -12,7 +13,7 @@ const GameDetailPage = () => {
       <VStack paddingX={8} paddingY={4} rowGap={2} textAlign="justify">
         {isLoading && <Spinner />}
         <Heading>{data?.name}</Heading>
-        <Text>{data?.description_raw}</Text>
+        <ExpandableText limit={300}>{data?.description_raw}</ExpandableText>
       </VStack>
     </>
   );
