@@ -1,8 +1,9 @@
-import { Heading, Spinner, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Spinner, VStack } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import useGame from "../hooks/useGame";
+import GameTrailer from "../components/GameTrailer";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -13,12 +14,18 @@ const GameDetailPage = () => {
 
   return (
     <>
-      <VStack paddingX={8} paddingY={4} rowGap={2} textAlign="justify">
-        {isLoading && <Spinner />}
+      {isLoading && (
+        <VStack paddingX={8} paddingY={4}>
+          <Spinner />
+        </VStack>
+      )}
+
+      <Flex paddingX={8} paddingY={4} flexDirection="column" rowGap={4}>
         <Heading>{data?.name}</Heading>
         <ExpandableText limit={300}>{data?.description_raw}</ExpandableText>
-      </VStack>
-      <GameAttributes game={data} />
+        <GameAttributes game={data} />
+        <GameTrailer gameId={data?.id} />
+      </Flex>
     </>
   );
 };

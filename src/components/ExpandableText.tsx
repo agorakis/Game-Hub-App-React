@@ -17,7 +17,7 @@ const ExpandableText = ({ limit, children }: ExpandableTextProps) => {
 
   return (
     <>
-      <Text>
+      <Text textAlign="justify">
         {summary}
         <Button
           marginX={2}
