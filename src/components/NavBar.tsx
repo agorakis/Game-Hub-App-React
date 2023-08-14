@@ -2,6 +2,7 @@ import { Flex, Image, Show } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -11,7 +12,9 @@ const NavBar = () => {
       gap={6}
       padding={2}
     >
-      <Image src={logo} boxSize="60px"></Image>
+      <Link to="/">
+        <Image src={logo} boxSize="60px" objectFit="cover" />
+      </Link>
       <Show above="md">
         <SearchInput />
       </Show>
