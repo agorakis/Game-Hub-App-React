@@ -1,4 +1,13 @@
-import { Box, Flex, Heading, Spinner, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Spinner,
+  VStack,
+} from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
@@ -21,13 +30,22 @@ const GameDetailPage = () => {
         </VStack>
       )}
 
-      <Flex paddingX={8} paddingY={4} flexDirection="column" rowGap={4}>
-        <Heading>{data?.name}</Heading>
-        <ExpandableText limit={300}>{data?.description_raw}</ExpandableText>
-        <GameAttributes game={data} />
-        <GameTrailer gameId={data?.id} />
-        <GameScreenshots gameId={data?.id} />
-      </Flex>
+      <SimpleGrid
+        paddingX={8}
+        paddingY={4}
+        columns={{ sm: 1, md: 2 }}
+        spacing={4}
+      >
+        <Flex flexDirection="column" rowGap={4}>
+          <Heading>{data?.name}</Heading>
+          <ExpandableText limit={300}>{data?.description_raw}</ExpandableText>
+          <GameAttributes game={data} />
+        </Flex>
+        <Flex flexDirection="column" rowGap={4}>
+          <GameTrailer gameId={data?.id} />
+          <GameScreenshots gameId={data?.id} />
+        </Flex>
+      </SimpleGrid>
     </>
   );
 };
