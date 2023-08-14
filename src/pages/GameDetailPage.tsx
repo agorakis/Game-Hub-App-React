@@ -4,6 +4,7 @@ import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import useGame from "../hooks/useGame";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenshots from "./../components/GameScreenshots";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -25,6 +26,7 @@ const GameDetailPage = () => {
         <ExpandableText limit={300}>{data?.description_raw}</ExpandableText>
         <GameAttributes game={data} />
         <GameTrailer gameId={data?.id} />
+        <GameScreenshots gameId={data?.id} />
       </Flex>
     </>
   );
